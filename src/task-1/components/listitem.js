@@ -1,18 +1,21 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 const ListItem = props => {
-  const { title, bg } = props.todo;
+  const { todo, delete: deleteTodo } = props;
+  const { title, bg, id } = todo;
   return (
-    <View
-      style={{
-        width: "100%",
-        padding: 10,
-        marginTop: 5,
-        backgroundColor: bg
-      }}
-    >
-      <Text>{title}</Text>
-    </View>
+    <TouchableOpacity onPress={deleteTodo(id)}>
+      <View
+        style={{
+          width: "100%",
+          padding: 10,
+          marginTop: 5,
+          backgroundColor: bg
+        }}
+      >
+        <Text>{title}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 

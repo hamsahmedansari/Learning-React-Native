@@ -47,12 +47,23 @@ class Task extends Component {
       todos: [
         ...per.todos,
         {
+          id: String(new Date().getTime()),
           title: textFiled,
           bg: colors[random]
         }
       ],
       textFiled: ""
     }));
+  };
+  handelDeleteTodos = id => {
+    if (!id.length) return false;
+    const { todos } = this.state;
+    let oldTodo = todos.find(todo => todo.id === id);
+    let newTodos = todos.filter(todo => todo.id !== id);
+    this.setState({
+      todo: newTodos
+    });
+    alert(`Successfully Delete '${oldTodo.title}' !!!`);
   };
   render() {
     const { textFiled, todos } = this.state;
@@ -75,7 +86,7 @@ class Task extends Component {
         </View>
         <View style={{ width: "100%" }}>
           {todos.map((todo, i) => (
-            <ListItem todo={todo} key={i} />
+            <ListItem todo={todo} key={i} delete={this.handelDeleteTodos} />
           ))}
         </View>
       </View>
