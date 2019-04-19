@@ -4,7 +4,7 @@ const ListItem = props => {
   const { todo, delete: deleteTodo } = props;
   const { title, bg, id } = todo;
   return (
-    <TouchableOpacity onPress={deleteTodo(id)}>
+    <TouchableOpacity onPress={()=>deleteTodo(id)}>
       <View
         style={{
           width: "100%",

@@ -59,9 +59,9 @@ class Task extends Component {
     if (!id.length) return false;
     const { todos } = this.state;
     let oldTodo = todos.find(todo => todo.id === id);
-    let newTodos = todos.filter(todo => todo.id !== id);
-    this.setState({
-      todo: newTodos
+    let newTodos = todos.filter(todo => todo !== oldTodo);
+        this.setState({
+      todos: newTodos
     });
     alert(`Successfully Delete '${oldTodo.title}' !!!`);
   };
@@ -75,7 +75,7 @@ class Task extends Component {
             style={styles.textFiled}
             placeholder="Add Task To List"
             value={textFiled}
-            onChangeText={this.handleChangeTextFiled}
+            onChangeText={(text)=>this.handleChangeTextFiled(text)}
           />
           <Button
             title="Added"
