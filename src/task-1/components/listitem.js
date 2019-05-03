@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 const ListItem = props => {
-  const { todo, delete: deleteTodo } = props;
+  const { todo, delete: deleteTodo ,index } = props;
   const { title, bg, id } = todo;
   return (
     <TouchableOpacity onPress={()=>deleteTodo(id)}>
@@ -13,7 +13,7 @@ const ListItem = props => {
           backgroundColor: bg
         }}
       >
-        <Text>{title}</Text>
+        <Text>{`${index+1} : ${title}`}</Text>
       </View>
     </TouchableOpacity>
   );

@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, TextInput, Button } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Button,
+  ScrollView
+} from "react-native";
 
 import ListItem from "./components/listitem";
 
@@ -8,7 +15,78 @@ class Task extends Component {
     super(props);
     this.state = {
       textFiled: "",
-      todos: []
+      todos: [
+        {
+          bg: "#FF4081",
+          id: "1556884670488",
+          title: "T"
+        },
+        {
+          bg: "#C2185B",
+          id: "1556884675366",
+          title: "Rest"
+        },
+        {
+          bg: "#D32F2F",
+          id: "1556884677320",
+          title: "Vaba"
+        },
+        {
+          bg: "#AFB42B",
+          id: "1556884678495",
+          title: "Vabaa"
+        },
+        {
+          bg: "#616161",
+          id: "1556884679650",
+          title: "Vabaaa"
+        },
+        {
+          bg: "#795548",
+          id: "1556884681059",
+          title: "Vabaaaz"
+        },
+        {
+          bg: "#616161",
+          id: "1556884682246",
+          title: "Vabaaazs"
+        },
+        {
+          bg: "#009688",
+          id: "1556884683595",
+          title: "Vabaaazsssss"
+        },
+        {
+          bg: "#FFA000",
+          id: "1556884685040",
+          title: "Vabaaazsssssvbsh"
+        },
+        {
+          bg: "#E64A19",
+          id: "1556884688410",
+          title: "Vau"
+        },
+        {
+          bg: "#FF9800",
+          id: "1556884691986",
+          title: "P"
+        },
+        {
+          bg: "#8BC34A",
+          id: "1556884696919",
+          title: "Us"
+        },
+        {
+          bg: "#FF4081",
+          id: "1556884703475",
+          title: " Shs"
+        },
+        {
+          bg: "#FFEB3B",
+          id: "1556884707578",
+          title: "Sysb"
+        }
+      ]
     };
   }
   handleChangeTextFiled = value => {
@@ -60,13 +138,15 @@ class Task extends Component {
     const { todos } = this.state;
     let oldTodo = todos.find(todo => todo.id === id);
     let newTodos = todos.filter(todo => todo !== oldTodo);
-        this.setState({
+    this.setState({
       todos: newTodos
     });
     alert(`Successfully Delete '${oldTodo.title}' !!!`);
   };
   render() {
     const { textFiled, todos } = this.state;
+    // console.log(this.state);
+
     return (
       <View style={styles.container}>
         <Text style={styles.heading}>Task 1 - Todo App</Text>
@@ -75,7 +155,7 @@ class Task extends Component {
             style={styles.textFiled}
             placeholder="Add Task To List"
             value={textFiled}
-            onChangeText={(text)=>this.handleChangeTextFiled(text)}
+            onChangeText={text => this.handleChangeTextFiled(text)}
           />
           <Button
             title="Added"
@@ -84,11 +164,16 @@ class Task extends Component {
             onPress={this.handleAddTodos}
           />
         </View>
-        <View style={{ width: "100%" }}>
+        <ScrollView style={{ width: "100%" }}>
           {todos.map((todo, i) => (
-            <ListItem todo={todo} key={i} delete={this.handelDeleteTodos} />
+            <ListItem
+              todo={todo}
+              index={i}
+              key={i}
+              delete={this.handelDeleteTodos}
+            />
           ))}
-        </View>
+        </ScrollView>
       </View>
     );
   }
