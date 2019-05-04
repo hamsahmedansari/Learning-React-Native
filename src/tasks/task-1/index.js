@@ -11,9 +11,6 @@ import {
 import ListItem from "./components/listitem";
 
 class Task extends Component {
-  static navigationOptions = {
-    title: "Todo Task"
-  };
   constructor(props) {
     super(props);
     this.state = {

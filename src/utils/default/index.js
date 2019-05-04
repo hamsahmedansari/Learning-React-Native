@@ -3,9 +3,6 @@ import { ScrollView } from "react-native-gesture-handler";
 import ListItem from "./listitem";
 
 class defaultPage extends Component {
-  static navigationOptions = {
-    title: "Home"
-  };
   constructor(props) {
     super(props);
     this.state = {
