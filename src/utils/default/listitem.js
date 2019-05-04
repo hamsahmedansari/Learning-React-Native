@@ -12,7 +12,7 @@ const ListItem = props => {
           backgroundColor: "#D4D4D4"
         }}
       >
-        <Text>{`Task ${index + 1}:  ${title}`}</Text>
+        <Text>{`Task ${index}:  ${title}`}</Text>
       </View>
     </TouchableOpacity>
   );
