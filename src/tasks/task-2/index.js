@@ -1,16 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
+import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
 
-class task2 extends Component {
-  static navigationOption = {
-    title: "ActivityIndicator"
-  };
-  constructor(props) {
-    super(props);
-    this.state = {};
+const task2 = props => {
+  return (
+    <View style={[styles.container, styles.horizontal]}>
+      <ActivityIndicator />
+      <ActivityIndicator size="small" color="#00ff00" />
+      <ActivityIndicator size="large" color="#0000ff" />
+      <ActivityIndicator
+        size="small"
+        animating={false}
+        hidesWhenStopped={false}
+        color="#0000ff"
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center"
+  },
+  horizontal: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    padding: 10
   }
-  render() {
-    return null;
-  }
-}
+});
 
 export default task2;
