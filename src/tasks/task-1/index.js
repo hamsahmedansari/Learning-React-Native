@@ -11,6 +11,9 @@ import {
 import ListItem from "./components/listitem";
 
 class Task extends Component {
+  static navigationOptions = {
+    title: "Todo Task"
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -149,7 +152,7 @@ class Task extends Component {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.heading}>Task 1 - Todo App</Text>
+        {/* <Text style={styles.heading}>Task 1 - Todo App</Text> */}
         <View style={styles.innerContainer}>
           <TextInput
             style={styles.textFiled}

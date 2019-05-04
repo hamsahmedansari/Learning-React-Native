@@ -1,10 +1,16 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import test from "../test";
-import test1 from "../test1";
+
+// DefaultScreen
+import defaultScreen from "./default";
+import task1 from "../tasks/task-1";
 
 const RootStack = createStackNavigator({
-  test1: { screen: test1 },
-  test: { screen: test }
+  default: {
+    screen: defaultScreen
+  },
+  task1: {
+    screen: task1
+  }
 });
 
 const App = createAppContainer(RootStack);
