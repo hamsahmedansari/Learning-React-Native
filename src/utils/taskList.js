@@ -6,6 +6,7 @@ import task4 from "../tasks/task-4";
 import task5 from "../tasks/task-5";
 import task6 from "../tasks/task-6";
 import task7 from "../tasks/task-7";
+import task8 from "../tasks/task-8";
 
 export default {
   defaultScreen: {
@@ -39,5 +40,9 @@ export default {
   task7: {
     title: "Image Background",
     screen: task7
+  },
+  task8: {
+    title: "Keyboard Avoiding View",
+    screen: task8
   }
 };
