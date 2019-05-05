@@ -5,6 +5,7 @@ import task3 from "../tasks/task-3";
 import task4 from "../tasks/task-4";
 import task5 from "../tasks/task-5";
 import task6 from "../tasks/task-6";
+import task7 from "../tasks/task-7";
 
 export default {
   defaultScreen: {
@@ -34,5 +35,9 @@ export default {
   task6: {
     title: "Image",
     screen: task6
+  },
+  task7: {
+    title: "Image Background",
+    screen: task7
   }
 };
