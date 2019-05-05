@@ -5,7 +5,7 @@ const task7 = () => {
     <View>
       <ImageBackground
         blurRadius={1}
-        resizeMode="center"
+        resizeMode="cover"
         source={{
           uri: `https://picsum.photos/200/300?random=${Math.floor(
             Math.random() * (100 - 0) + 1 + 1
