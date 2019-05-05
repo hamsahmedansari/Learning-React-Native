@@ -81,7 +81,8 @@ class task5 extends Component {
           data={data}
           keyExtractor={item => item.email}
           ItemSeparatorComponent={separator}
-          ListHeaderComponent={() => <Header />}
+          ListHeaderComponent={Header}
+          ListEmptyComponent={() => <ListItem title={`List is Empty`} />}
           renderItem={({ item }) => (
             <ListItem
               leftAvatar={{ source: { uri: item.picture.thumbnail } }}
