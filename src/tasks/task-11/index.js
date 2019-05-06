@@ -27,7 +27,7 @@ class task11 extends Component {
       <View>
         <Picker selectedValue={this.state.user} onValueChange={this.updateUser}>
           {this.state.list.map(list => (
-            <Picker.Item label={list} value={list} />
+            <Picker.Item key={Number(list)} label={list} value={list} />
           ))}
         </Picker>
         <Picker
@@ -38,7 +38,7 @@ class task11 extends Component {
           onValueChange={this.updateUser}
         >
           {this.state.list.map(list => (
-            <Picker.Item label={list} value={list} />
+            <Picker.Item key={Number(list)} label={list} value={list} />
           ))}
         </Picker>
         <Text style={styles.text}>{this.state.user}</Text>
