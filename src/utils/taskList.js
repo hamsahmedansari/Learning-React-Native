@@ -14,6 +14,7 @@ import task12 from "../tasks/task-12";
 import task13 from "../tasks/task-13";
 import task14 from "../tasks/task-14";
 import task15 from "../tasks/task-15";
+import task16 from "../tasks/task-16";
 
 export default {
   defaultScreen: {
@@ -79,5 +80,9 @@ export default {
   task15: {
     title: "SectionList",
     screen: task15
+  },
+  task16: {
+    title: "Slider",
+    screen: task16
   }
 };
