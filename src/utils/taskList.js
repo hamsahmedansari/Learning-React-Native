@@ -11,6 +11,7 @@ import task9 from "../tasks/task-9";
 import task10 from "../tasks/task-10";
 import task11 from "../tasks/task-11";
 import task12 from "../tasks/task-12";
+import task13 from "../tasks/task-13";
 
 export default {
   defaultScreen: {
@@ -64,5 +65,9 @@ export default {
   task12: {
     title: "Progress Bar Android",
     screen: task12
+  },
+  task13: {
+    title: "Refresh Control",
+    screen: task13
   }
 };
