@@ -13,6 +13,7 @@ import task11 from "../tasks/task-11";
 import task12 from "../tasks/task-12";
 import task13 from "../tasks/task-13";
 import task14 from "../tasks/task-14";
+import task15 from "../tasks/task-15";
 
 export default {
   defaultScreen: {
@@ -74,5 +75,9 @@ export default {
   task14: {
     title: "ScrollView",
     screen: task14
+  },
+  task15: {
+    title: "SectionList",
+    screen: task15
   }
 };
