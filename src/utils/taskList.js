@@ -8,6 +8,7 @@ import task6 from "../tasks/task-6";
 import task7 from "../tasks/task-7";
 import task8 from "../tasks/task-8";
 import task9 from "../tasks/task-9";
+import task10 from "../tasks/task-10";
 
 export default {
   defaultScreen: {
@@ -49,5 +50,9 @@ export default {
   task9: {
     title: "List View",
     screen: task9
+  },
+  task10: {
+    title: "Modal",
+    screen: task10
   }
 };
