@@ -12,6 +12,7 @@ import task10 from "../tasks/task-10";
 import task11 from "../tasks/task-11";
 import task12 from "../tasks/task-12";
 import task13 from "../tasks/task-13";
+import task14 from "../tasks/task-14";
 
 export default {
   defaultScreen: {
@@ -69,5 +70,9 @@ export default {
   task13: {
     title: "Refresh Control",
     screen: task13
+  },
+  task14: {
+    title: "ScrollView",
+    screen: task14
   }
 };
