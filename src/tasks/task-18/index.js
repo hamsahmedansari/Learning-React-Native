@@ -20,6 +20,26 @@ class task18 extends Component {
           onValueChange={this._handleChangeSwitch}
           value={this.state.value}
         />
+        <Switch
+          disabled={true}
+          onValueChange={this._handleChangeSwitch}
+          value={this.state.value}
+        />
+        <Switch
+          thumbColor="pink"
+          onValueChange={this._handleChangeSwitch}
+          value={this.state.value}
+        />
+        <Switch
+          tintColor="pink"
+          onValueChange={this._handleChangeSwitch}
+          value={this.state.value}
+        />
+        <Switch
+          trackColor={{ false: "red", true: "green" }}
+          onValueChange={this._handleChangeSwitch}
+          value={this.state.value}
+        />
         <Text>{String(this.state.value)}</Text>
       </View>
     );
