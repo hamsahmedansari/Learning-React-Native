@@ -20,6 +20,7 @@ import task18 from "../tasks/task-18";
 import task19 from "../tasks/task-19";
 import task20 from "../tasks/task-20";
 import task21 from "../tasks/task-21";
+import task22 from "../tasks/task-22";
 
 export default {
   defaultScreen: {
@@ -109,5 +110,9 @@ export default {
   task21: {
     title: "Toolbar Android",
     screen: task21
+  },
+  task22: {
+    title: "TouchableHighlight",
+    screen: task22
   }
 };
