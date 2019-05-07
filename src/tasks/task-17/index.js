@@ -21,7 +21,12 @@ class task17 extends Component {
       // }
 
       <View>
-        <StatusBar backgroundColor="blue" barStyle="light-content" />
+        <StatusBar
+          backgroundColor="blue"
+          barStyle="light-content"
+          StatusBarAnimation="slide"
+          animated={true}
+        />
         <Text>Status bar Color Change</Text>
       </View>
     );
