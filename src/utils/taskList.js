@@ -18,6 +18,7 @@ import task16 from "../tasks/task-16";
 import task17 from "../tasks/task-17";
 import task18 from "../tasks/task-18";
 import task19 from "../tasks/task-19";
+import task20 from "../tasks/task-20";
 
 export default {
   defaultScreen: {
@@ -99,5 +100,9 @@ export default {
   task19: {
     title: "Text",
     screen: task19
+  },
+  task20: {
+    title: "TextInput",
+    screen: task20
   }
 };
