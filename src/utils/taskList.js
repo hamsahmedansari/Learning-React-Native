@@ -23,6 +23,7 @@ import task21 from "../tasks/task-21";
 import task22 from "../tasks/task-22";
 import task23 from "../tasks/task-23";
 import task24 from "../tasks/task-24";
+import task25 from "../tasks/task-25";
 
 export default {
   defaultScreen: {
@@ -124,5 +125,9 @@ export default {
   task24: {
     title: "TouchableOpacity",
     screen: task24
+  },
+  task25: {
+    title: "TouchableWithoutFeedback",
+    screen: task25
   }
 };
