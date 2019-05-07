@@ -19,6 +19,7 @@ import task17 from "../tasks/task-17";
 import task18 from "../tasks/task-18";
 import task19 from "../tasks/task-19";
 import task20 from "../tasks/task-20";
+import task21 from "../tasks/task-21";
 
 export default {
   defaultScreen: {
@@ -104,5 +105,9 @@ export default {
   task20: {
     title: "TextInput",
     screen: task20
+  },
+  task21: {
+    title: "Toolbar Android",
+    screen: task21
   }
 };
