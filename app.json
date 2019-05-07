@@ -22,6 +22,10 @@
     },
     "android": {
       "package": "com.hamsahmedansari.learningReact"
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#F44336"
     }
   }
 }
