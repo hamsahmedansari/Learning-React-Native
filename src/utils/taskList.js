@@ -25,6 +25,7 @@ import task23 from "../tasks/task-23";
 import task24 from "../tasks/task-24";
 import task25 from "../tasks/task-25";
 import task26 from "../tasks/task-26";
+import task27 from "../tasks/task-27";
 
 export default {
   defaultScreen: {
@@ -134,5 +135,9 @@ export default {
   task26: {
     title: "View",
     screen: task26
+  },
+  task27: {
+    title: "ViewPagerAndroid",
+    screen: task27
   }
 };
