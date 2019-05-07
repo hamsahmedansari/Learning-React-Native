@@ -16,6 +16,7 @@ import task14 from "../tasks/task-14";
 import task15 from "../tasks/task-15";
 import task16 from "../tasks/task-16";
 import task17 from "../tasks/task-17";
+import task18 from "../tasks/task-18";
 
 export default {
   defaultScreen: {
@@ -89,5 +90,9 @@ export default {
   task17: {
     title: "StatusBar",
     screen: task17
+  },
+  task18: {
+    title: "Switch",
+    screen: task18
   }
 };
