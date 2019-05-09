@@ -27,6 +27,7 @@ import task25 from "../tasks/task-25";
 import task26 from "../tasks/task-26";
 import task27 from "../tasks/task-27";
 import task28 from "../tasks/task-28";
+import task29 from "../tasks/task-29";
 
 export default {
   defaultScreen: {
@@ -144,5 +145,9 @@ export default {
   task28: {
     title: "VirtualizedList",
     screen: task28
+  },
+  task29: {
+    title: "WebView",
+    screen: task29
   }
 };

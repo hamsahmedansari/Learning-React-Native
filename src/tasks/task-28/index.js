@@ -18,7 +18,7 @@ class task28 extends Component {
           initialNumberToRender={20}
           windowSize={21}
           data={this.list}
-          getItemCount={data => 365}
+          getItemCount={data => 100}
           disableVirtualization={false}
           getItem={(data, index) => data[index]}
           keyExtractor={(item, index) => {
@@ -27,7 +27,7 @@ class task28 extends Component {
           renderItem={({ item, index }) => {
             return (
               <View style={{ height: 50 }}>
-                <Text>{item.key}</Text>
+                <Text>{item.key ? item.key : null}</Text>
               </View>
             );
           }}
