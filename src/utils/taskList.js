@@ -31,6 +31,7 @@ import task29 from "../tasks/task-29";
 import task30 from "../tasks/task-30";
 import task31 from "../tasks/task-31";
 import task32 from "../tasks/task-32";
+import task33 from "../tasks/task-33";
 
 export const Home = {
   defaultScreen: {
@@ -170,5 +171,9 @@ export const Api = {
   task32: {
     title: "AsyncStorage",
     screen: task32
+  },
+  task33: {
+    title: "BackAndroid",
+    screen: task33
   }
 };
