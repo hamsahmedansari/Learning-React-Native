@@ -29,6 +29,7 @@ import task27 from "../tasks/task-27";
 import task28 from "../tasks/task-28";
 import task29 from "../tasks/task-29";
 import task30 from "../tasks/task-30";
+import task31 from "../tasks/task-31";
 
 export const Home = {
   defaultScreen: {
@@ -160,5 +161,9 @@ export const Api = {
   task30: {
     title: "Alert",
     screen: task30
+  },
+  task31: {
+    title: "AppState",
+    screen: task31
   }
 };
