@@ -1,32 +1,60 @@
 import React, { Component } from "react";
-import { ScrollView } from "react-native-gesture-handler";
+import { View, ScrollView, Text, StyleSheet, Dimensions } from "react-native";
 import ListItem from "./listitem";
-import taskList from "../taskList";
+import { Components } from "../taskList";
 
 class defaultPage extends Component {
+  static navigationOptions = {
+    header: null
+  };
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
+    const allTasks = { ...Components };
     return (
-      <ScrollView style={{ width: "100%" }}>
-        {Object.keys(taskList).map((e, i) =>
-          e !== "defaultScreen" ? (
+      <View>
+        <Text
+          style={{
+            fontSize: 20,
+            padding: 10,
+            margin: 10,
+            textAlign: "center",
+            height: 50
+          }}
+        >
+          Complete React Native
+        </Text>
+        <ScrollView
+          style={{
+            width: "100%",
+            height: Dimensions.get("window").height - 100
+          }}
+        >
+          <Text style={styles.SectionHeaderStyle}>React Components</Text>
+
+          {Object.keys(Components).map((e, i) => (
             <ListItem
               navigation={this.props.navigation}
               key={i}
-              title={taskList[e].title}
-              index={i}
+              title={Components[e].title}
+              index={i + 1}
               page={e}
             />
-          ) : (
-            false
-          )
-        )}
-      </ScrollView>
+          ))}
+        </ScrollView>
+      </View>
     );
   }
 }
 
+const styles = StyleSheet.create({
+  SectionHeaderStyle: {
+    backgroundColor: "#9c27b0",
+    fontSize: 16,
+    padding: 5,
+    color: "#fff"
+  }
+});
 export default defaultPage;

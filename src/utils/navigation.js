@@ -1,13 +1,15 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import taskList from "./taskList";
+import { Home, Components } from "./taskList";
 
 const getScreensNavigator = () => {
   let temp = {};
-  Object.keys(taskList).map(e => {
+  const allTasks = { ...Home, ...Components };
+
+  Object.keys(allTasks).map(e => {
     temp[e] = {
-      screen: taskList[e].screen,
+      screen: allTasks[e].screen,
       navigationOptions: ({ navigation }) => ({
-        title: taskList[e].title
+        title: allTasks[e].title
       })
     };
   });

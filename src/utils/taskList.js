@@ -29,11 +29,14 @@ import task27 from "../tasks/task-27";
 import task28 from "../tasks/task-28";
 import task29 from "../tasks/task-29";
 
-export default {
+export const Home = {
   defaultScreen: {
     title: "Home",
     screen: defaultScreen
-  },
+  }
+};
+
+export const Components = {
   task1: {
     title: "Todo Task",
     screen: task1
