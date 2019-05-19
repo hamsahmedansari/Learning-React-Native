@@ -2,8 +2,6 @@ import React from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 const ListItem = props => {
   const { title, index, page } = props;
-  console.log(page);
-
   return (
     <TouchableOpacity onPress={() => props.navigation.navigate(String(page))}>
       <View

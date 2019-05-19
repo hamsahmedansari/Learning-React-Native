@@ -28,6 +28,7 @@ import task26 from "../tasks/task-26";
 import task27 from "../tasks/task-27";
 import task28 from "../tasks/task-28";
 import task29 from "../tasks/task-29";
+import task30 from "../tasks/task-30";
 
 export const Home = {
   defaultScreen: {
@@ -152,5 +153,12 @@ export const Components = {
   task29: {
     title: "WebView",
     screen: task29
+  }
+};
+
+export const Api = {
+  task30: {
+    title: "Alert",
+    screen: task30
   }
 };

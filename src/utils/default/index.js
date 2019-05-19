@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, ScrollView, Text, StyleSheet, Dimensions } from "react-native";
 import ListItem from "./listitem";
-import { Components } from "../taskList";
+import { Components, Api } from "../taskList";
 
 class defaultPage extends Component {
   static navigationOptions = {
@@ -12,7 +12,6 @@ class defaultPage extends Component {
     this.state = {};
   }
   render() {
-    const allTasks = { ...Components };
     return (
       <View>
         <Text
@@ -32,6 +31,7 @@ class defaultPage extends Component {
             height: Dimensions.get("window").height - 100
           }}
         >
+          {/* Components */}
           <Text style={styles.SectionHeaderStyle}>React Components</Text>
 
           {Object.keys(Components).map((e, i) => (
@@ -39,6 +39,18 @@ class defaultPage extends Component {
               navigation={this.props.navigation}
               key={i}
               title={Components[e].title}
+              index={i + 1}
+              page={e}
+            />
+          ))}
+          {/* Api */}
+          <Text style={styles.SectionHeaderStyle}>React Api</Text>
+
+          {Object.keys(Api).map((e, i) => (
+            <ListItem
+              navigation={this.props.navigation}
+              key={i}
+              title={Api[e].title}
               index={i + 1}
               page={e}
             />
@@ -54,6 +66,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#9c27b0",
     fontSize: 16,
     padding: 5,
+    margin: 5,
     color: "#fff"
   }
 });
