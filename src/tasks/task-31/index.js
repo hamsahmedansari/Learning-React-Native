@@ -28,7 +28,7 @@ class task31 extends Component {
     this.setState({ appState: nextAppState });
   };
   render() {
-    return <Text>Current state is: {this.state.appState}</Text>;
+    return <Text>Current state of App is: {this.state.appState}</Text>;
   }
 }
 
