@@ -40,6 +40,7 @@ import task38 from "../tasks/task-38";
 import task39 from "../tasks/task-39";
 import task40 from "../tasks/task-40";
 import task41 from "../tasks/task-41";
+import task42 from "../tasks/task-42";
 
 export const Home = {
   defaultScreen: {
@@ -215,5 +216,9 @@ export const Api = {
   task41: {
     title: "Layout Props",
     screen: task41
+  },
+  task42: {
+    title: "NetInfo",
+    screen: task42
   }
 };
