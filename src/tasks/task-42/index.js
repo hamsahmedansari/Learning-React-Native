@@ -19,8 +19,12 @@ class task42 extends Component {
     });
   }
 
-  _handleConnectivityChange = isConnected => {
-    this.setState({ status: isConnected });
+  _handleConnectivityChange = status => {
+    const { type } = await NetInfo.getConnectionInfo();
+    this.setState({
+      status,
+      type
+    });
   };
   componentWillUnmount() {
     NetInfo.isConnected.removeEventListener(
