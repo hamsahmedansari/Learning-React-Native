@@ -36,6 +36,7 @@ import task34 from "../tasks/task-34";
 import task35 from "../tasks/task-35";
 import task36 from "../tasks/task-36";
 import task37 from "../tasks/task-37";
+import task38 from "../tasks/task-38";
 
 export const Home = {
   defaultScreen: {
@@ -195,5 +196,9 @@ export const Api = {
   task37: {
     title: "Dimensions",
     screen: task37
+  },
+  task38: {
+    title: "ImageEditor",
+    screen: task38
   }
 };
