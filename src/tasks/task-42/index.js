@@ -19,7 +19,7 @@ class task42 extends Component {
     });
   }
 
-  _handleConnectivityChange = status => {
+  _handleConnectivityChange = async status => {
     const { type } = await NetInfo.getConnectionInfo();
     this.setState({
       status,
