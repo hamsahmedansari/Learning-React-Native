@@ -34,6 +34,7 @@ import task32 from "../tasks/task-32";
 import task33 from "../tasks/task-33";
 import task34 from "../tasks/task-34";
 import task35 from "../tasks/task-35";
+import task36 from "../tasks/task-36";
 
 export const Home = {
   defaultScreen: {
@@ -185,5 +186,9 @@ export const Api = {
   task35: {
     title: "Clipboard",
     screen: task35
+  },
+  task36: {
+    title: "DatePickerAndroid",
+    screen: task36
   }
 };
