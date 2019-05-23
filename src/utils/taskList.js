@@ -43,6 +43,7 @@ import task41 from "../tasks/task-41";
 import task42 from "../tasks/task-42";
 import task43 from "../tasks/task-43";
 import task44 from "../tasks/task-44";
+import task45 from "../tasks/task-45";
 
 export const Home = {
   defaultScreen: {
@@ -230,5 +231,9 @@ export const Api = {
   task44: {
     title: "Share",
     screen: task44
+  },
+  task45: {
+    title: "StyleSheets",
+    screen: task45
   }
 };
