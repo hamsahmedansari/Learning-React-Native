@@ -44,6 +44,7 @@ import task42 from "../tasks/task-42";
 import task43 from "../tasks/task-43";
 import task44 from "../tasks/task-44";
 import task45 from "../tasks/task-45";
+import task46 from "../tasks/task-46";
 
 export const Home = {
   defaultScreen: {
@@ -235,5 +236,9 @@ export const Api = {
   task45: {
     title: "StyleSheets",
     screen: task45
+  },
+  task46: {
+    title: "Text Style Props",
+    screen: task46
   }
 };
