@@ -33,7 +33,7 @@ class task48 extends Component {
 
         <Button
           title="show Basic Toast 2"
-          color="pink"
+          color="purple"
           onPress={() => {
             ToastAndroid.showWithGravityAndOffset(
               "A wild toast appeared!",
