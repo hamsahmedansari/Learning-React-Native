@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View, Image } from "react-native";
 
 class task50 extends Component {
   constructor(props) {
@@ -7,7 +7,11 @@ class task50 extends Component {
     this.state = {};
   }
   render() {
-    return <View>{/*      */}</View>;
+    return (
+      <View>
+        <Image source={require("../../../assets/hams.jpg")} />
+      </View>
+    );
   }
 }
 
