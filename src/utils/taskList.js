@@ -49,6 +49,7 @@ import task47 from "../tasks/task-47";
 import task48 from "../tasks/task-48";
 import task49 from "../tasks/task-49";
 import task50 from "../tasks/task50";
+import task51 from "../tasks/task51";
 
 export const Home = {
   defaultScreen: {
@@ -263,5 +264,9 @@ export const Expo = {
   task50: {
     title: "Assets",
     screen: task50
+  },
+  task51: {
+    title: "Preloading & Caching Assets",
+    screen: task51
   }
 };
