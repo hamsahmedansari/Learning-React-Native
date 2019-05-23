@@ -48,6 +48,7 @@ import task46 from "../tasks/task-46";
 import task47 from "../tasks/task-47";
 import task48 from "../tasks/task-48";
 import task49 from "../tasks/task-49";
+import task50 from "../tasks/task50";
 
 export const Home = {
   defaultScreen: {
@@ -255,5 +256,12 @@ export const Api = {
   task49: {
     title: "Transforms",
     screen: task49
+  }
+};
+
+export const Expo = {
+  task50: {
+    title: "Assets",
+    screen: task50
   }
 };

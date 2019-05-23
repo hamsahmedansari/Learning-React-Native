@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { View, ScrollView, Text, StyleSheet, Dimensions } from "react-native";
+
 import ListItem from "./listitem";
-import { Components, Api } from "../taskList";
+import { Components, Api, Expo } from "../taskList";
 
 class defaultPage extends Component {
   static navigationOptions = {
@@ -51,6 +52,19 @@ class defaultPage extends Component {
               navigation={this.props.navigation}
               key={i}
               title={Api[e].title}
+              index={i + 1}
+              page={e}
+            />
+          ))}
+
+          {/* Expo */}
+          <Text style={styles.SectionHeaderStyle}>Expo SDK</Text>
+
+          {Object.keys(Expo).map((e, i) => (
+            <ListItem
+              navigation={this.props.navigation}
+              key={i}
+              title={Expo[e].title}
               index={i + 1}
               page={e}
             />
