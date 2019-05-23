@@ -20,8 +20,8 @@ class task46 extends Component {
           }}
         >
           I am some text
+          {"\n"}
         </Text>
-        {"\n"}
         <Text
           style={{
             color: "Red",
