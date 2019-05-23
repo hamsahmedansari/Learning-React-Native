@@ -45,6 +45,7 @@ import task43 from "../tasks/task-43";
 import task44 from "../tasks/task-44";
 import task45 from "../tasks/task-45";
 import task46 from "../tasks/task-46";
+import task47 from "../tasks/task-47";
 
 export const Home = {
   defaultScreen: {
@@ -240,5 +241,9 @@ export const Api = {
   task46: {
     title: "Text Style Props",
     screen: task46
+  },
+  task47: {
+    title: "TimePickerAndroid",
+    screen: task47
   }
 };
