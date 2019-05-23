@@ -42,6 +42,7 @@ import task40 from "../tasks/task-40";
 import task41 from "../tasks/task-41";
 import task42 from "../tasks/task-42";
 import task43 from "../tasks/task-43";
+import task44 from "../tasks/task-44";
 
 export const Home = {
   defaultScreen: {
@@ -225,5 +226,9 @@ export const Api = {
   task43: {
     title: "PixelRatio",
     screen: task43
+  },
+  task44: {
+    title: "Share",
+    screen: task44
   }
 };
