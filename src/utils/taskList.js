@@ -48,9 +48,9 @@ import task46 from "../tasks/task-46";
 import task47 from "../tasks/task-47";
 import task48 from "../tasks/task-48";
 import task49 from "../tasks/task-49";
-import task50 from "../tasks/task50";
-import task51 from "../tasks/task51";
-import task52 from "../tasks/task52";
+import task50 from "../tasks/task-50";
+import task51 from "../tasks/task-51";
+import task52 from "../tasks/task-52";
 
 export const Home = {
   defaultScreen: {
