@@ -50,6 +50,7 @@ import task48 from "../tasks/task-48";
 import task49 from "../tasks/task-49";
 import task50 from "../tasks/task50";
 import task51 from "../tasks/task51";
+import task52 from "../tasks/task52";
 
 export const Home = {
   defaultScreen: {
@@ -268,5 +269,9 @@ export const Expo = {
   task51: {
     title: "Preloading & Caching Assets",
     screen: task51
+  },
+  task52: {
+    title: "Vector Icons",
+    screen: task52
   }
 };
