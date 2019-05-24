@@ -51,6 +51,7 @@ import task49 from "../tasks/task-49";
 import task50 from "../tasks/task-50";
 import task51 from "../tasks/task-51";
 import task52 from "../tasks/task-52";
+import task53 from "../tasks/task-53";
 
 export const Home = {
   defaultScreen: {
@@ -273,5 +274,9 @@ export const Expo = {
   task52: {
     title: "Vector Icons",
     screen: task52
+  },
+  task53: {
+    title: "Using Custom Fonts",
+    screen: task53
   }
 };
