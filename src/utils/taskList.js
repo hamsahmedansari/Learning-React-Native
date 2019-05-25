@@ -52,6 +52,7 @@ import task50 from "../tasks/task-50";
 import task51 from "../tasks/task-51";
 import task52 from "../tasks/task-52";
 import task53 from "../tasks/task-53";
+import task54 from "../tasks/task-54";
 
 export const Home = {
   defaultScreen: {
@@ -278,5 +279,9 @@ export const Expo = {
   task53: {
     title: "Using Custom Fonts",
     screen: task53
+  },
+  task54: {
+    title: "Configuring StatusBar",
+    screen: task54
   }
 };
