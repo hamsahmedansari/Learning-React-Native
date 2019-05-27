@@ -53,6 +53,7 @@ import task51 from "../tasks/task-51";
 import task52 from "../tasks/task-52";
 import task53 from "../tasks/task-53";
 import task54 from "../tasks/task-54";
+import task55 from "../tasks/task-55";
 
 export const Home = {
   defaultScreen: {
@@ -283,5 +284,9 @@ export const Expo = {
   task54: {
     title: "Configuring StatusBar",
     screen: task54
+  },
+  task55: {
+    title: "Configuring OTA Updates",
+    screen: task55
   }
 };
