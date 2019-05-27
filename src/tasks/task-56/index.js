@@ -32,7 +32,7 @@ class task56 extends Component {
   };
 
   _subscribe = () => {
-    this._sub56scription = Accelerometer.addListener(accelerometerData => {
+    this._subscription = Accelerometer.addListener(accelerometerData => {
       this.setState({ accelerometerData });
     });
   };
