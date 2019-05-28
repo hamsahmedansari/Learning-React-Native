@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ScrollView, Text, Button } from "react-native";
+import { ScrollView, Text, Button, View } from "react-native";
 import {
   AdMobBanner,
   AdMobInterstitial,
@@ -14,25 +14,141 @@ class task57 extends Component {
       adMobBannerLogs: [],
       adMobInterstitialLogs: [],
       adMobPublisherBannerLogs: [],
-      adMobInterstitialLogs: []
+      adMobRewardLogs: []
     };
   }
   _handelAdMobInterstitial = async () => {
-    AdMobInterstitial.setAdUnitID("ca-app-pub-3940256099942544/1033173712");
-    AdMobInterstitial.setTestDeviceID("EMULATOR");
     await AdMobInterstitial.requestAdAsync();
     await AdMobInterstitial.showAdAsync();
   };
   _handelAdMobReward = async () => {
-    AdMobRewarded.setAdUnitID("ca-app-pub-3940256099942544/5224354917");
-    AdMobRewarded.setTestDeviceID("EMULATOR");
     await AdMobRewarded.requestAdAsync();
     await AdMobRewarded.showAdAsync();
   };
+  componentDidMount = async () => {
+    AdMobInterstitial.setAdUnitID("ca-app-pub-3940256099942544/1033173712");
+    AdMobInterstitial.setTestDeviceID("EMULATOR");
+    AdMobInterstitial.addEventListener("interstitialDidLoad", () => {
+      this.setState(per => ({
+        ...per,
+        adMobInterstitialLogs: [
+          ...per.adMobInterstitialLogs,
+          "New Ad is loaded"
+        ]
+      }));
+    });
+    AdMobInterstitial.addEventListener("interstitialDidFailToLoad", err => {
+      console.error(err);
+      this.setState(per => ({
+        ...per,
+        adMobInterstitialLogs: [
+          ...per.adMobInterstitialLogs,
+          "New Ad is Failed"
+        ]
+      }));
+    });
+
+    AdMobInterstitial.addEventListener("interstitialDidOpen", () => {
+      this.setState(per => ({
+        ...per,
+        adMobInterstitialLogs: [...per.adMobInterstitialLogs, "Ad is Open"]
+      }));
+    });
+    AdMobInterstitial.addEventListener("interstitialDidClose", () => {
+      this.setState(per => ({
+        ...per,
+        adMobInterstitialLogs: [...per.adMobInterstitialLogs, "Ad is Closed"]
+      }));
+    });
+    AdMobInterstitial.addEventListener(
+      "interstitialWillLeaveApplication",
+      () => {
+        this.setState(per => ({
+          ...per,
+          adMobInterstitialLogs: [
+            ...per.adMobInterstitialLogs,
+            "Ad is leaving the application"
+          ]
+        }));
+      }
+    );
+    await AdMobInterstitial.requestAdAsync();
+
+    //
+    AdMobRewarded.setAdUnitID("ca-app-pub-3940256099942544/5224354917");
+    AdMobRewarded.setTestDeviceID("EMULATOR");
+    AdMobRewarded.addEventListener("rewardedVideoDidRewardUser", d => {
+      console.log(d);
+
+      this.setState(per => ({
+        ...per,
+        adMobRewardLogs: [
+          ...per.adMobRewardLogs,
+          "Ad is leaving the application"
+        ]
+      }));
+    });
+    AdMobRewarded.addEventListener("rewardedVideoDidLoad", d => {
+      console.log(d);
+
+      this.setState(per => ({
+        ...per,
+        adMobRewardLogs: [...per.adMobRewardLogs, "Ad is Loaded"]
+      }));
+    });
+
+    AdMobRewarded.addEventListener("rewardedVideoDidFailToLoad", d => {
+      console.log(d);
+
+      this.setState(per => ({
+        ...per,
+        adMobRewardLogs: [...per.adMobRewardLogs, "Ad is Failed to load"]
+      }));
+    });
+    AdMobRewarded.addEventListener("rewardedVideoDidOpen", d => {
+      console.log(d);
+
+      this.setState(per => ({
+        ...per,
+        adMobRewardLogs: [...per.adMobRewardLogs, "Ad is open"]
+      }));
+    });
+    AdMobRewarded.addEventListener("rewardedVideoDidComplete", d => {
+      console.log(d);
+
+      this.setState(per => ({
+        ...per,
+        adMobRewardLogs: [...per.adMobRewardLogs, "Ad is complete"]
+      }));
+    });
+    AdMobRewarded.addEventListener("rewardedVideoDidClose", d => {
+      console.log(d);
+
+      this.setState(per => ({
+        ...per,
+        adMobRewardLogs: [...per.adMobRewardLogs, "Ad is close"]
+      }));
+    });
+    AdMobRewarded.addEventListener("rewardedVideoWillLeaveApplication", d => {
+      console.log(d);
+
+      this.setState(per => ({
+        ...per,
+        adMobRewardLogs: [
+          ...per.adMobRewardLogs,
+          "Ad is leavening the application"
+        ]
+      }));
+    });
+  };
+  componentWillUnmount() {
+    AdMobInterstitial.removeAllListeners();
+    AdMobRewarded.removeAllListeners();
+  }
 
   render() {
     return (
-      <ScrollView>
+      <View>
         <Text>Banner</Text>
         <AdMobBanner
           bannerSize="fullBanner"
@@ -100,7 +216,7 @@ class task57 extends Component {
         </ScrollView>
         <Text>Publisher Banner</Text>
         <PublisherBanner
-          bannerSize="mediumRectangle"
+          bannerSize="leaderboard"
           adUnitID="ca-app-pub-3940256099942544/6300978111" //
           testDeviceID="EMULATOR "
           onAdViewDidReceiveAd={() => {
@@ -217,11 +333,11 @@ class task57 extends Component {
             borderColor: "black"
           }}
         >
-          {this.state.adMobInterstitialLogs.map((log, i) => (
+          {this.state.adMobRewardLogs.map((log, i) => (
             <Text key={i}>{log}</Text>
           ))}
         </ScrollView>
-      </ScrollView>
+      </View>
     );
   }
 }
