@@ -56,6 +56,7 @@ import task54 from "../tasks/task-54";
 import task55 from "../tasks/task-55";
 import task56 from "../tasks/task-56";
 import task57 from "../tasks/task-57";
+import task58 from "../tasks/task-58";
 
 export const Home = {
   defaultScreen: {
@@ -298,5 +299,9 @@ export const Expo = {
   task57: {
     title: "Admob",
     screen: task57
+  },
+  task58: {
+    title: "Amplitude Analytics",
+    screen: task58
   }
 };
