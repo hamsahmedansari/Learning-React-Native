@@ -58,6 +58,7 @@ import task56 from "../tasks/task-56";
 import task57 from "../tasks/task-57";
 import task58 from "../tasks/task-58";
 import task59 from "../tasks/task-59";
+import task60 from "../tasks/task-60";
 
 export const Home = {
   defaultScreen: {
@@ -308,5 +309,9 @@ export const Expo = {
   task59: {
     title: "AppAuth",
     screen: task59
+  },
+  task60: {
+    title: "AppLoading",
+    screen: task60
   }
 };
