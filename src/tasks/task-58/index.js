@@ -11,7 +11,7 @@ class task58 extends Component {
     };
   }
   componentDidMount() {
-    Amplitude.initialize(api.api);
+    Amplitude.initialize(api);
     Amplitude.setUserProperties({
       "i am name": "i am test"
     });
